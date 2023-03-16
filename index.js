@@ -36,7 +36,7 @@ router.get("/chat", async (ctx, next) => {
         });
     
     // 将生成的内容返回给客户端
-    ctx.body = res.data.choices[0].message.content
+    ctx.body = res.data.choices[0]
 });
 
 router.get("/image", async (ctx, next) => {
