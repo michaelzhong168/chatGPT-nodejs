@@ -32,7 +32,7 @@ router.get("/chat", async (ctx, next) => {
              model: "gpt-3.5-turbo",
 // replace prompt with messages and set prompt as content with a role.
              messages: [{role: "user", content: prompt}], 
-             temperature: 0.2
+             temperature: 0.7
         });
     
     // 将生成的内容返回给客户端
