@@ -28,7 +28,7 @@ router.get("/chat", async (ctx, next) => {
 //     })
     // gpt-3.5-turbo
 // replace .createCompletion() with .createChatCompletion()
-    const completion = await openai.createChatCompletion({ 
+    const res = await openai.createChatCompletion({ 
              model: "gpt-3.5-turbo",
 // replace prompt with messages and set prompt as content with a role.
              messages: [{role: "user", content: prompt}], 
