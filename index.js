@@ -34,7 +34,7 @@ router.get("/chat", async (ctx, next) => {
              messages: [{role: "user", content: prompt}], 
              temperature: 0.7
         });
-    
+    console.log(res.data.choices[0].message.content);
     // 将生成的内容返回给客户端
     ctx.body = res.data.choices[0].message
 });
