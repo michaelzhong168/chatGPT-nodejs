@@ -31,7 +31,8 @@ router.get("/chat", async (ctx, next) => {
     const res = await openai.createChatCompletion({ 
              model: "gpt-3.5-turbo",
 // replace prompt with messages and set prompt as content with a role.
-             messages: [{role: "user", content: prompt}], 
+//              messages: [{role: "user", content: prompt}], 
+             messages: [{role: "user", content: "简单介绍一下自己"}], 
              temperature: 0.7
         });
     console.log(res.data.choices[0].message.content);
